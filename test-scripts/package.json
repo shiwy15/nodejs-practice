@@ -1,0 +1,14 @@
+{
+  "name": "test-scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prehello": "echo '헬로 시작'",
+    "hello": "echo 'hello Node.js'",
+    "posthello": "echo '헬로 끝'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

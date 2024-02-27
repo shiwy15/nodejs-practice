@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "lodash": "github:lodash/lodash#4.17.21",
+    "sample-package": "file:sample-package"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
