@@ -1,0 +1,7 @@
+{
+  "name": "node_server",
+  "packageManager": "yarn@4.1.0",
+  "dependencies": {
+    "chalk": "^5.3.0"
+  }
+}
