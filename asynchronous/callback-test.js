@@ -31,4 +31,4 @@ function getResult(user) {
 }
 
 const result = register({ email: "dedoo@practice.com", password: "0000", name: "deedo" });
-console.log(result);
+console.log(result); 
