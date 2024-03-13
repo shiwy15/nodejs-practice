@@ -1,0 +1,23 @@
+@server = http://localhost:3000
+
+GET {{server}}/person
+###
+POST {{server}}/person 
+Content-Type: application/json
+
+{
+    "name": "chulsu",
+    "age": 30,
+    "email": "sfsf@email.com"
+}
+###
+GET {{server}}/person/deedo@email.com
+###
+PUT {{server}}/person/deedo@email.com
+Content-Type: application/json
+
+{
+    "age": 29
+}
+###
+DELETE {{server}}/person/deedo@email.com

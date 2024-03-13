@@ -7,7 +7,9 @@ const Person = require("./person-model");
 mongoose.set("strictQuery", false);
 
 const app = express();
-// http에서 body를 파싱하기 위한 설정
+/** Post 요청의 본문을 파싱하는 역할 
+ * bodyParser 미들웨어는 'app.use()'로 Express 애플리케이션에 추가되어, 
+ * 요청이 들어올 때마다 JSON 형식의 본문을 파싱하고, 파싱된 데이터를 req.body에 추가함. */ 
 app.use(bodyParser.json());
 
 app.listen(3000, async () => {
@@ -27,8 +29,8 @@ app.get("/person", async (req, res) => {
 
 // 특정 이메일로 person 찾기
 app.get("/person/:email", async (req, res) => {
-    const person = new Person.findOne({ email: req.params.email });
-    res.send(person);
+    const person = await Person.findOne({ email: req.params.email });
+    res.send(person); 
 });
 
 // person 데이터 추가하기
@@ -46,7 +48,7 @@ app.put("/person/:email", async (req, res) => {
         {new: true}
     );
     console.log(person);
-    rew.send(person);
+    res.send(person);
 });
 
 // person 데이터 삭제하기
